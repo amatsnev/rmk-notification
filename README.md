@@ -9,4 +9,4 @@
 
 # USE
 
-`docker run --rm rmk-notification `
+`docker run --rm -env-file /path/to/.env rmk-notification `
