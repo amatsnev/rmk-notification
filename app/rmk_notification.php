@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+#$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+#$dotenv->load();
 
 $nameSERVER = $_ENV['NAMESERVER']; 
 $nameDB = $_ENV['NAMEDB'];
@@ -14,12 +14,12 @@ $nameUSER = $_ENV['USERNAME'];
 $passUSER = $_ENV['PASSUSER'];
 
 // Telegram settings
-chatID = $_ENV['CHATID'];
-tokenTelegram = $_ENV['TOKENTELEGRAM'];
+$chatID = $_ENV['CHATID'];
+$tokenTelegram = $_ENV['TOKENTELEGRAM'];
 //SemySMS settings
-url = $_ENV['URL'];
-token = $_ENV['TOKEN'];
-device = $_ENV['DEVICE'];
+$url = $_ENV['URL'];
+$token = $_ENV['TOKEN'];
+$device = $_ENV['DEVICE'];
 
 
 $connection = pg_connect("host=$nameSERVER dbname=$nameDB user=$nameUSER password=$passUSER");
